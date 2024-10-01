@@ -6,11 +6,11 @@ import generateToken from "../utils/generateToken.js";
 ////////////////signup///////////////
 export const signup = async (req: Request, res: Response) => {
   try {
-    const { fullname, username, password, confirmPassword, gender } = req.body;
-    if (!fullname || !username || !password || !confirmPassword || !gender) {
+    const { fullname, username, password, confirmpassword, gender } = req.body;
+    if (!fullname || !username || !password || !confirmpassword || !gender) {
       return res.status(400).json({ error: "Please Fillyyy in all fields" });
     }
-    if (password !== confirmPassword) {
+    if (password !== confirmpassword) {
       return res.status(400).json({ error: "Password dont match" });
     }
     const user = await prisma.user.findUnique({
