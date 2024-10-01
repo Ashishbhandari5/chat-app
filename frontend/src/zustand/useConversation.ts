@@ -1,9 +1,9 @@
 import {create} from 'zustand';
-type ConversationType={
-  id:string;
-  fullname:string;
-  profilepic:string;
-}
+// type ConversationType={
+//   id:string;
+//   fullname:string;
+//   profilepic:string;
+// }
 type MessageType={
   id:string;
   body:string;

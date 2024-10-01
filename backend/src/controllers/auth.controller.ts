@@ -98,5 +98,8 @@ export const getMe = async (req: Request, res: Response) => {
       username: user.fullname,
       profilepic: user.profilepic,
     });
-  } catch (error) {}
+  } catch (error:any) {
+    console.log("Error in getMe controller", error.message);
+		res.status(500).json({ error: "Internal Server Error" });
+  }
 };

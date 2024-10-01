@@ -3,7 +3,7 @@
 
 	type AuthUserType = {
 		id: string;
-		fullName: string;
+		fullname: string;
 		email: string;
 		profilePic: string;
 		gender: string;
