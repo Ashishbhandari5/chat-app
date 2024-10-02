@@ -4,10 +4,11 @@ import {create} from 'zustand';
 //   fullname:string;
 //   profilepic:string;
 // }
-type MessageType={
+export type MessageType={
   id:string;
   body:string;
   senderId:string;
+  createdAt:string;
 }
 
 interface ConversationState{

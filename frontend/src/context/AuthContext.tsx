@@ -5,7 +5,7 @@
 		id: string;
 		fullname: string;
 		email: string;
-		profilePic: string;
+		profilepic: string;
 		gender: string;
 	};
 

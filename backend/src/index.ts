@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Change this to your frontend port
+    origin: "http://localhost:5000", // Change this to your frontend port
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   })
 );
