@@ -35,7 +35,7 @@
 						const res = await fetch("/api/auth/me");
 						if (!res.ok) {
 								const errorText = await res.text(); // Get the raw text if not OK
-								console.error('Error response:', errorText); // Log the raw error response
+								// console.error('Error response:', errorText); // Log the raw error response
 								throw new Error(errorText || "Failed to fetch user data");
 						}
 		
@@ -52,7 +52,7 @@
 		
 						setAuthUser(data);
 				} catch (error: any) {
-						console.error("Error fetching user:", error);
+					 
 						toast.error(error.message || "An error occurred while fetching user data");
 				} finally {
 						setIsLoading(false); // Ensure loading state is updated

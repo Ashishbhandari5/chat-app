@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
     setLoading(true);
     setMessages([])
     try {
-      const res=await fetch(`/api/message/${selectedConversation.id}`);
+      const res=await fetch(`/api/messages/${selectedConversation.id}`);
       const data=await res.json();
       if(!res.ok) throw new Error(data.error || "An error occured");
       setMessages(data);
