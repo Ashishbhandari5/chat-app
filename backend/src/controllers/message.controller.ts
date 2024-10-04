@@ -1,5 +1,6 @@
 import {Request,Response} from "express";
 import prisma from "../db/prisma.js";
+import {io, getReceiverSocketId } from "../socket/socket.js";
 
 
 
@@ -48,7 +49,10 @@ if(!conversation){
       }
     })
   }
-
+const receiverSocketId=getReceiverSocketId(receiverId);
+if(receiverSocketId){
+  io.to(receiverSocketId).emit("newMessage",newMessage)
+}
 
 res.status(201).json(newMessage)
   }catch(error:any){
